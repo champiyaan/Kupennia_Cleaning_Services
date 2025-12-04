@@ -252,24 +252,26 @@ export default function ServicesPage() {
                 index={index}
                 className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all p-6 border border-gray-100"
               >
-                <div className="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4 transform transition-transform hover:scale-110 hover:rotate-6">
-                  <Icon className="w-7 h-7 text-primary-600" />
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  {service.title}
-                </h2>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
-                      <span className="text-primary-600 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 pt-4 border-t border-gray-200">
-                  <p className="text-primary-600 font-semibold">{service.price}</p>
-                </div>
+                <Link href="/contact" className="block">
+                  <div className="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-4 transform transition-transform hover:scale-110 hover:rotate-6">
+                    <Icon className="w-7 h-7 text-primary-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2 hover:text-primary-600 transition-colors">
+                    {service.title}
+                  </h2>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-sm text-gray-700">
+                        <span className="text-primary-600 mr-2">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="text-primary-600 font-semibold">{service.price}</p>
+                  </div>
+                </Link>
               </AnimatedCard>
             );
           })}

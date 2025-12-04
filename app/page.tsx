@@ -161,13 +161,15 @@ export default function Home() {
                   index={index}
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all"
                 >
-                  <div className="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform hover:scale-110">
-                    <Icon className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <Link href="/contact" className="block">
+                    <div className="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform hover:scale-110">
+                      <Icon className="w-6 h-6 text-primary-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-primary-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </Link>
                 </AnimatedCard>
               );
             })}
