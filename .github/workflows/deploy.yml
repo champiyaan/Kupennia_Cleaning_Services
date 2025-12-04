@@ -49,9 +49,10 @@ jobs:
             cd /root/kupennia-cleaning
             rm -rf node_modules .next/cache .git data .env.local
             npm ci
-            pm2 describe kupennia-cleaning > /dev/null
+            pm2 describe kupennia-cleaning > /dev/null 2>&1
             if [ $? -eq 0 ]; then
-              pm2 reload kupennia-cleaning || pm2 restart kupennia-cleaning
+              pm2 reload kupennia-cleaning || (pm2 delete kupennia-cleaning 2>/dev/null && pm2 start npm --name "kupennia-cleaning" -- run start)
             else
               pm2 start npm --name "kupennia-cleaning" -- run start
             fi
+            pm2 save
