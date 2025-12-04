@@ -31,10 +31,10 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           source: "."
-          target: "/var/www/kupennia-cleaning"
+          target: "/root/kupennia-cleaning"
           rm: true
           overwrite: true
       
@@ -43,10 +43,10 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           port: 22
           script: |
-            cd /var/www/kupennia-cleaning
+            cd /root/kupennia-cleaning
             rm -rf node_modules .next/cache .git data .env.local
             npm ci
             pm2 describe kupennia-cleaning > /dev/null
