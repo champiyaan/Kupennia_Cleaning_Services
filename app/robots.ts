@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://kupennia.co.zw/sitemap.xml',
+    sitemap: 'https://kupennia.com/sitemap.xml',
   }
 }
 

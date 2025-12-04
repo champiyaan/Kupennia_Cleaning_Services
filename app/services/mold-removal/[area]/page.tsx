@@ -54,7 +54,7 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      url: `https://kupennia.co.zw/services/mold-removal/${area}`,
+      url: `https://kupennia.com/services/mold-removal/${area}`,
     },
   };
 }
@@ -88,7 +88,7 @@ export default async function BnbCleaningAreaPage({
             "@type": "LocalBusiness",
             "name": `Kupennia Cleaning - ${serviceData.title} ${areaName}`,
             "description": `Professional ${serviceData.title.toLowerCase()} services in ${areaName}, Harare.`,
-            "url": `https://kupennia.co.zw/services/mold-removal/${area}`,
+            "url": `https://kupennia.com/services/mold-removal/${area}`,
             "address": {
               "@type": "PostalAddress",
               "addressLocality": areaName,
@@ -128,25 +128,25 @@ export default async function BnbCleaningAreaPage({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kupennia.co.zw"
+                "item": "https://kupennia.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://kupennia.co.zw/services"
+                "item": "https://kupennia.com/services"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": serviceData.title,
-                "item": "https://kupennia.co.zw/services/mold-removal"
+                "item": "https://kupennia.com/services/mold-removal"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": `${serviceData.title} ${areaName}`,
-                "item": `https://kupennia.co.zw/services/mold-removal/${area}`
+                "item": `https://kupennia.com/services/mold-removal/${area}`
               }
             ]
           })

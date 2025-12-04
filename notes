@@ -22,5 +22,5 @@ DEFAULT_FROM_EMAIL=geekt869@gmail.com
 
 How to access
 After deployment, your sitemap will be available at:
-https://kupennia.co.zw/sitemap.xml
-https://kupennia.co.zw/robots.txt (references the sitemap)
+https://kupennia.com/sitemap.xml
+https://kupennia.com/robots.txt (references the sitemap)

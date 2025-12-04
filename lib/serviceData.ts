@@ -559,8 +559,8 @@ export function generateServiceMetadata(serviceSlug: string, areaName?: string):
       description,
       type: 'website',
       url: areaName 
-        ? `https://kupennia.co.zw/services/${serviceSlug}/${areaName.toLowerCase().replace(/\s+/g, '-')}`
-        : `https://kupennia.co.zw/services/${serviceSlug}`,
+        ? `https://kupennia.com/services/${serviceSlug}/${areaName.toLowerCase().replace(/\s+/g, '-')}`
+        : `https://kupennia.com/services/${serviceSlug}`,
     },
   };
 }

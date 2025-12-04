@@ -3,7 +3,7 @@ import { getAllAreaSlugs } from '@/lib/areaData'
 import { getAllServiceSlugs } from '@/lib/serviceData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kupennia.co.zw'
+  const baseUrl = 'https://kupennia.com'
   
   const areaSlugs = getAllAreaSlugs()
   const serviceSlugs = getAllServiceSlugs()

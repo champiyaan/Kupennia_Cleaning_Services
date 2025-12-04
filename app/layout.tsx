@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Suspense } from "react";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = "https://kupennia.co.zw";
+const siteUrl = "https://kupennia.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -151,6 +152,19 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-white`}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6SHP6E4B8W"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6SHP6E4B8W');
+          `}
+        </Script>
         <Suspense fallback={<div className="h-16 bg-white shadow-md"></div>}>
         <Navbar />
         </Suspense>

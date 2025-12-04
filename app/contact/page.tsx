@@ -88,10 +88,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a
-                      href="mailto:info@kuppenia.com"
+                      href="mailto:info@kupennia.com"
                       className="text-primary-600 hover:text-primary-700"
                     >
-                      info@kuppenia.com
+                      info@kupennia.com
                     </a>
                   </div>
                 </div>
