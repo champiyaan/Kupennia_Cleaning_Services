@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAreaData, generateAreaMetadata, getAllAreaSlugs } from '@/lib/areaData';
 import AnimatedSection from '@/components/AnimatedSection';
 import AnimatedCard from '@/components/AnimatedCard';
-import { CheckCircle2, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle2, Mail, MapPin } from 'lucide-react';
 
 interface AreaPageProps {
   params: {
@@ -189,12 +189,6 @@ export default function AreaPage({ params }: AreaPageProps) {
               >
                 Request Free Quote
               </Link>
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                <a href="tel:+263712345678" className="hover:text-primary-100 transition-colors">
-                  +263 71 234 5678
-                </a>
-              </div>
             </div>
           </div>
         </AnimatedSection>

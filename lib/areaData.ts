@@ -493,6 +493,361 @@ export const AREA_CONTENT: Record<string, {
     'Westwood is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Westwood\'s homes, offices, and commercial properties.',
     ['Avondale - The Ridge', 'Kutandara']
   ),
+  'waterfalls': createAreaContent(
+    'Waterfalls',
+    'Waterfalls is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Waterfalls\' homes, offices, and commercial properties.',
+    ['Arlington', 'Hatfield', 'Ardbennie']
+  ),
+  'arlington': createAreaContent(
+    'Arlington',
+    'Arlington is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Arlington\'s homes, offices, and commercial properties.',
+    ['Waterfalls', 'Hatfield', 'Prospect']
+  ),
+  'hatfield': createAreaContent(
+    'Hatfield',
+    'Hatfield is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Hatfield\'s homes, offices, and commercial properties.',
+    ['Waterfalls', 'Arlington', 'Ardbennie']
+  ),
+  'ardbennie': createAreaContent(
+    'Ardbennie',
+    'Ardbennie is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Ardbennie\'s homes, offices, and commercial properties.',
+    ['Waterfalls', 'Hatfield', 'Prospect']
+  ),
+  'prospect': createAreaContent(
+    'Prospect',
+    'Prospect is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Prospect\'s homes, offices, and commercial properties.',
+    ['Arlington', 'Ardbennie', 'Fidelity']
+  ),
+  'fidelity': createAreaContent(
+    'Fidelity',
+    'Fidelity is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Fidelity\'s homes, offices, and commercial properties.',
+    ['Prospect', 'Southlea Park', 'Southview Park']
+  ),
+  'southlea-park': createAreaContent(
+    'Southlea Park',
+    'Southlea Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Southlea Park\'s homes, offices, and commercial properties.',
+    ['Fidelity', 'Southview Park', 'Mainway Meadows']
+  ),
+  'southview-park': createAreaContent(
+    'Southview Park',
+    'Southview Park is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Southview Park\'s homes, offices, and commercial properties.',
+    ['Fidelity', 'Southlea Park', 'Mainway Meadows']
+  ),
+  'mainway-meadows': createAreaContent(
+    'Mainway Meadows',
+    'Mainway Meadows is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Mainway Meadows\' homes, offices, and commercial properties.',
+    ['Southlea Park', 'Southview Park', 'Willowvale']
+  ),
+  'willowvale': createAreaContent(
+    'Willowvale',
+    'Willowvale is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Willowvale\'s homes, offices, and commercial properties.',
+    ['Mainway Meadows', 'Chadcombe', 'Southerton']
+  ),
+  'chadcombe': createAreaContent(
+    'Chadcombe',
+    'Chadcombe is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Chadcombe\'s homes, offices, and commercial properties.',
+    ['Willowvale', 'Southerton', 'Graniteside']
+  ),
+  'southerton': createAreaContent(
+    'Southerton',
+    'Southerton is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Southerton\'s homes, offices, and commercial properties.',
+    ['Willowvale', 'Chadcombe', 'Graniteside']
+  ),
+  'graniteside': createAreaContent(
+    'Graniteside',
+    'Graniteside is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Graniteside\'s homes, offices, and commercial properties.',
+    ['Chadcombe', 'Southerton', 'Msasa Park']
+  ),
+  'msasa-park': createAreaContent(
+    'Msasa Park',
+    'Msasa Park is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Msasa Park\'s homes, offices, and commercial properties.',
+    ['Graniteside', 'Stoneridge', 'Braeside']
+  ),
+  'stoneridge': createAreaContent(
+    'Stoneridge',
+    'Stoneridge is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Stoneridge\'s homes, offices, and commercial properties.',
+    ['Msasa Park', 'Braeside', 'Arcadia']
+  ),
+  'braeside': createAreaContent(
+    'Braeside',
+    'Braeside is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Braeside\'s homes, offices, and commercial properties.',
+    ['Msasa Park', 'Stoneridge', 'Arcadia']
+  ),
+  'arcadia': createAreaContent(
+    'Arcadia',
+    'Arcadia is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Arcadia\'s homes, offices, and commercial properties.',
+    ['Stoneridge', 'Braeside', 'Hillside']
+  ),
+  'hillside': createAreaContent(
+    'Hillside',
+    'Hillside is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Hillside\'s homes, offices, and commercial properties.',
+    ['Arcadia', 'Workington', 'Mbudzi']
+  ),
+  'workington': createAreaContent(
+    'Workington',
+    'Workington is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Workington\'s homes, offices, and commercial properties.',
+    ['Hillside', 'Mbudzi', 'Airport']
+  ),
+  'mbudzi': createAreaContent(
+    'Mbudzi',
+    'Mbudzi is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Mbudzi\'s homes, offices, and commercial properties.',
+    ['Hillside', 'Workington', 'Airport']
+  ),
+  'airport': createAreaContent(
+    'Airport',
+    'Airport is a residential and commercial area known for its proximity to the airport and mixed-use properties. We provide comprehensive cleaning for Airport\'s homes, offices, and commercial properties.',
+    ['Workington', 'Mbudzi', 'Houghton Park']
+  ),
+  'houghton-park': createAreaContent(
+    'Houghton Park',
+    'Houghton Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Houghton Park\'s homes, offices, and commercial properties.',
+    ['Airport', 'Park Meadowlands', 'Queensdale']
+  ),
+  'park-meadowlands': createAreaContent(
+    'Park Meadowlands',
+    'Park Meadowlands is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Park Meadowlands\' homes, offices, and commercial properties.',
+    ['Houghton Park', 'Queensdale', 'Lochinvar']
+  ),
+  'queensdale': createAreaContent(
+    'Queensdale',
+    'Queensdale is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Queensdale\'s homes, offices, and commercial properties.',
+    ['Houghton Park', 'Park Meadowlands', 'Lochinvar']
+  ),
+  'lochinvar': createAreaContent(
+    'Lochinvar',
+    'Lochinvar is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Lochinvar\'s homes, offices, and commercial properties.',
+    ['Park Meadowlands', 'Queensdale', 'Southlands']
+  ),
+  'southlands': createAreaContent(
+    'Southlands',
+    'Southlands is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Southlands\' homes, offices, and commercial properties.',
+    ['Lochinvar', 'Cranborne', 'Parktown']
+  ),
+  'cranborne': createAreaContent(
+    'Cranborne',
+    'Cranborne is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Cranborne\'s homes, offices, and commercial properties.',
+    ['Southlands', 'Parktown', 'Ushewokunze']
+  ),
+  'parktown': createAreaContent(
+    'Parktown',
+    'Parktown is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Parktown\'s homes, offices, and commercial properties.',
+    ['Southlands', 'Cranborne', 'Ushewokunze']
+  ),
+  'ushewokunze': createAreaContent(
+    'Ushewokunze',
+    'Ushewokunze is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Ushewokunze\'s homes, offices, and commercial properties.',
+    ['Cranborne', 'Parktown', 'St. Martins']
+  ),
+  'st-martins': createAreaContent(
+    'St. Martins',
+    'St. Martins is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for St. Martins\' homes, offices, and commercial properties.',
+    ['Ushewokunze', 'Logan Park', 'Chiedza Park']
+  ),
+  'logan-park': createAreaContent(
+    'Logan Park',
+    'Logan Park is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Logan Park\'s homes, offices, and commercial properties.',
+    ['St. Martins', 'Chiedza Park']
+  ),
+  'chiedza-park': createAreaContent(
+    'Chiedza Park',
+    'Chiedza Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Chiedza Park\'s homes, offices, and commercial properties.',
+    ['St. Martins', 'Logan Park']
+  ),
+  'greendale': createAreaContent(
+    'Greendale',
+    'Greendale is a well-established residential suburb known for its family homes and community facilities. We provide comprehensive cleaning for Greendale\'s homes, offices, and commercial properties.',
+    ['Greendale North', 'Eastlea', 'Highlands']
+  ),
+  'eastlea': createAreaContent(
+    'Eastlea',
+    'Eastlea is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Eastlea\'s homes, offices, and commercial properties.',
+    ['Greendale', 'Zimre Park', 'Msasa']
+  ),
+  'zimre-park': createAreaContent(
+    'Zimre Park',
+    'Zimre Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Zimre Park\'s homes, offices, and commercial properties.',
+    ['Eastlea', 'Msasa', 'Mandara']
+  ),
+  'msasa': createAreaContent(
+    'Msasa',
+    'Msasa is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Msasa\'s homes, offices, and commercial properties.',
+    ['Eastlea', 'Zimre Park', 'Mandara']
+  ),
+  'mandara': createAreaContent(
+    'Mandara',
+    'Mandara is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Mandara\'s homes, offices, and commercial properties.',
+    ['Zimre Park', 'Msasa', 'Sunway City']
+  ),
+  'sunway-city': createAreaContent(
+    'Sunway City',
+    'Sunway City is a residential development known for its modern homes and family-friendly environment. We provide comprehensive cleaning for Sunway City\'s homes, offices, and commercial properties.',
+    ['Mandara', 'Rockview', 'Manresa']
+  ),
+  'rockview': createAreaContent(
+    'Rockview',
+    'Rockview is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Rockview\'s homes, offices, and commercial properties.',
+    ['Sunway City', 'Manresa', 'Kamfinsa']
+  ),
+  'manresa': createAreaContent(
+    'Manresa',
+    'Manresa is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Manresa\'s homes, offices, and commercial properties.',
+    ['Sunway City', 'Rockview', 'Kamfinsa']
+  ),
+  'kamfinsa': createAreaContent(
+    'Kamfinsa',
+    'Kamfinsa is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Kamfinsa\'s homes, offices, and commercial properties.',
+    ['Rockview', 'Manresa', 'Athlone']
+  ),
+  'athlone': createAreaContent(
+    'Athlone',
+    'Athlone is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Athlone\'s homes, offices, and commercial properties.',
+    ['Kamfinsa', 'Upper Hillside', 'Amby']
+  ),
+  'upper-hillside': createAreaContent(
+    'Upper Hillside',
+    'Upper Hillside is a residential area known for its elevated location and family homes. We provide comprehensive cleaning for Upper Hillside\'s homes, offices, and commercial properties.',
+    ['Athlone', 'Hillside', 'Amby']
+  ),
+  'amby': createAreaContent(
+    'Amby',
+    'Amby is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Amby\'s homes, offices, and commercial properties.',
+    ['Athlone', 'Upper Hillside', 'Greengrove']
+  ),
+  'greengrove': createAreaContent(
+    'Greengrove',
+    'Greengrove is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Greengrove\'s homes, offices, and commercial properties.',
+    ['Amby', 'Rhodesville']
+  ),
+  'rhodesville': createAreaContent(
+    'Rhodesville',
+    'Rhodesville is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Rhodesville\'s homes, offices, and commercial properties.',
+    ['Greengrove', 'Avondale']
+  ),
+  'budiriro': createAreaContent(
+    'Budiriro',
+    'Budiriro is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Budiriro\'s homes, offices, and commercial properties.',
+    ['Glen View', 'Dzivarasekwa', 'Warren Park']
+  ),
+  'glen-view': createAreaContent(
+    'Glen View',
+    'Glen View is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Glen View\'s homes, offices, and commercial properties.',
+    ['Budiriro', 'Glen Norah', 'Kuwadzana']
+  ),
+  'dzivarasekwa': createAreaContent(
+    'Dzivarasekwa',
+    'Dzivarasekwa is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Dzivarasekwa\'s homes, offices, and commercial properties.',
+    ['Budiriro', 'Warren Park', 'Granary Park']
+  ),
+  'warren-park': createAreaContent(
+    'Warren Park',
+    'Warren Park is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Warren Park\'s homes, offices, and commercial properties.',
+    ['Budiriro', 'Dzivarasekwa', 'Glen Norah']
+  ),
+  'glen-norah': createAreaContent(
+    'Glen Norah',
+    'Glen Norah is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Glen Norah\'s homes, offices, and commercial properties.',
+    ['Glen View', 'Warren Park', 'Kuwadzana']
+  ),
+  'kuwadzana': createAreaContent(
+    'Kuwadzana',
+    'Kuwadzana is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Kuwadzana\'s homes, offices, and commercial properties.',
+    ['Glen View', 'Glen Norah', 'Highfield']
+  ),
+  'granary-park': createAreaContent(
+    'Granary Park',
+    'Granary Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Granary Park\'s homes, offices, and commercial properties.',
+    ['Dzivarasekwa', 'Mufakose', 'Highfield']
+  ),
+  'highfield': createAreaContent(
+    'Highfield',
+    'Highfield is a well-established residential area known for its family homes and community facilities. We provide comprehensive cleaning for Highfield\'s homes, offices, and commercial properties.',
+    ['Kuwadzana', 'Granary Park', 'Mufakose']
+  ),
+  'mufakose': createAreaContent(
+    'Mufakose',
+    'Mufakose is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Mufakose\'s homes, offices, and commercial properties.',
+    ['Granary Park', 'Highfield', 'Hatcliffe']
+  ),
+  'hatcliffe': createAreaContent(
+    'Hatcliffe',
+    'Hatcliffe is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Hatcliffe\'s homes, offices, and commercial properties.',
+    ['Mufakose', 'Rydale Ridge', 'Donnybrook']
+  ),
+  'rydale-ridge': createAreaContent(
+    'Rydale Ridge',
+    'Rydale Ridge is a residential area known for its elevated location and family homes. We provide comprehensive cleaning for Rydale Ridge\'s homes, offices, and commercial properties.',
+    ['Hatcliffe', 'Donnybrook', 'Marimba Park']
+  ),
+  'donnybrook': createAreaContent(
+    'Donnybrook',
+    'Donnybrook is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Donnybrook\'s homes, offices, and commercial properties.',
+    ['Hatcliffe', 'Rydale Ridge', 'Marimba Park']
+  ),
+  'marimba-park': createAreaContent(
+    'Marimba Park',
+    'Marimba Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Marimba Park\'s homes, offices, and commercial properties.',
+    ['Rydale Ridge', 'Donnybrook', 'Kambuzuma']
+  ),
+  'kambuzuma': createAreaContent(
+    'Kambuzuma',
+    'Kambuzuma is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Kambuzuma\'s homes, offices, and commercial properties.',
+    ['Marimba Park', 'Mabvuku', 'Tafara']
+  ),
+  'mabvuku': createAreaContent(
+    'Mabvuku',
+    'Mabvuku is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Mabvuku\'s homes, offices, and commercial properties.',
+    ['Kambuzuma', 'Tafara', 'Snake Park']
+  ),
+  'tafara': createAreaContent(
+    'Tafara',
+    'Tafara is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Tafara\'s homes, offices, and commercial properties.',
+    ['Kambuzuma', 'Mabvuku', 'New Tafara']
+  ),
+  'snake-park': createAreaContent(
+    'Snake Park',
+    'Snake Park is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Snake Park\'s homes, offices, and commercial properties.',
+    ['Mabvuku', 'Amalinda', 'Crowborough']
+  ),
+  'amalinda': createAreaContent(
+    'Amalinda',
+    'Amalinda is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Amalinda\'s homes, offices, and commercial properties.',
+    ['Snake Park', 'Crowborough', 'Epworth']
+  ),
+  'crowborough': createAreaContent(
+    'Crowborough',
+    'Crowborough is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for Crowborough\'s homes, offices, and commercial properties.',
+    ['Snake Park', 'Amalinda', 'Epworth']
+  ),
+  'epworth': createAreaContent(
+    'Epworth',
+    'Epworth is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Epworth\'s homes, offices, and commercial properties.',
+    ['Amalinda', 'Crowborough', 'New Tafara']
+  ),
+  'new-tafara': createAreaContent(
+    'New Tafara',
+    'New Tafara is a residential area known for its family homes and community facilities. We provide comprehensive cleaning for New Tafara\'s homes, offices, and commercial properties.',
+    ['Tafara', 'Epworth', 'Sunningdale']
+  ),
+  'sunningdale': createAreaContent(
+    'Sunningdale',
+    'Sunningdale is a residential area known for its family homes and peaceful environment. We provide comprehensive cleaning for Sunningdale\'s homes, offices, and commercial properties.',
+    ['New Tafara', 'Mbare']
+  ),
+  'mbare': createAreaContent(
+    'Mbare',
+    'Mbare is a vibrant residential and commercial area known for its markets and community facilities. We provide comprehensive cleaning for Mbare\'s homes, offices, and commercial properties.',
+    ['Sunningdale', 'Belvedere']
+  ),
+  'avenues': createAreaContent(
+    'Avenues',
+    'Avenues is a prestigious residential and commercial area in Harare, known for its upscale properties and proximity to the city center. We provide premium cleaning services for Avenues\' homes, offices, and commercial spaces.',
+    ['Harare City Centre', 'Belgravia', 'Avondale']
+  ),
+  'harare-city-centre': createAreaContent(
+    'Harare City Centre',
+    'Harare City Centre is the bustling commercial heart of Harare, featuring offices, retail spaces, and mixed-use properties. We provide comprehensive commercial and office cleaning services for Harare City Centre\'s businesses and properties.',
+    ['Avenues', 'Belvedere', 'Avondale']
+  ),
 };
 
 // Get all area slugs
@@ -503,6 +858,70 @@ export function getAllAreaSlugs(): string[] {
 // Get area data by slug
 export function getAreaData(slug: string) {
   return AREA_CONTENT[slug] || null;
+}
+
+// Get area data or create default data for any area
+export function getAreaDataOrDefault(slug: string) {
+  const existingData = AREA_CONTENT[slug];
+  if (existingData) {
+    return existingData;
+  }
+  
+  // Create default data for any area name
+  const areaName = slug.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+  
+  return {
+    intro: `${areaName} is a location in Harare where we provide professional cleaning services. Our team is ready to serve homes and businesses in ${areaName} with comprehensive cleaning solutions.`,
+    services: [
+      'Home & apartment cleaning',
+      'Office & commercial cleaning',
+      'Event cleaning & after-party cleanup',
+      'Mold removal & remediation',
+      'Deep cleaning services',
+      'Window & glass cleaning',
+      'Move-in/move-out cleaning',
+      'Spring & seasonal cleaning',
+      'Post-construction cleaning',
+      'Carpet cleaning',
+      'Mattress cleaning',
+      'BnB cleaning',
+      'Regular maintenance cleaning',
+      'Car wash & detailing',
+      'Bin cleaning',
+    ],
+    whyChoose: [
+      `Trusted cleaning services in ${areaName}`,
+      'Eco-friendly, non-toxic products',
+      'Flexible scheduling for families',
+      'Fast response and satisfaction guarantee',
+      'Transparent pricing',
+    ],
+    trustSignals: [
+      `Serving ${areaName} residents`,
+      'Satisfaction guaranteed',
+      'Eco-friendly & safe',
+      'Transparent pricing',
+    ],
+    testimonial: {
+      quote: `Kupennia Cleaning provides excellent service in ${areaName}. Professional and reliable!`,
+      name: `Happy customer in ${areaName}`,
+    },
+    faq: [
+      { q: `Do you clean homes in ${areaName}?`, a: `Yes, we provide cleaning services in ${areaName} and throughout Harare. Contact us for more information.` },
+      { q: 'What are your rates?', a: 'Our rates are competitive and transparent. Contact us for a free quote tailored to your needs.' },
+    ],
+    meta: {
+      title: `${areaName} Cleaning Services | Professional Cleaners Harare`,
+      description: `Professional cleaning services in ${areaName}, Harare. Expert cleaners for homes, offices, and commercial spaces. Get your free quote today!`,
+    },
+    internalLinks: [
+      { href: '/cleaning-services', label: 'Our Services' },
+      { href: '/cleaning-services/deep-cleaning', label: 'Deep Cleaning' },
+    ],
+    nearbyAreas: [],
+  };
 }
 
 // Generate metadata for area pages

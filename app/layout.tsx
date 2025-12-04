@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -101,7 +102,6 @@ const jsonLd = {
   image: `${siteUrl}/logo.jpg`,
   "@id": siteUrl,
   url: siteUrl,
-  telephone: "+263-71-234-5678",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -151,7 +151,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-white`}>
+        <Suspense fallback={<div className="h-16 bg-white shadow-md"></div>}>
         <Navbar />
+        </Suspense>
         <main className="min-h-screen bg-white">{children}</main>
         <Footer />
       </body>

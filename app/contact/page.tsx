@@ -15,16 +15,40 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to a backend API
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
       setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    }, 3000);
+      
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to submit form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -57,21 +81,6 @@ export default function ContactPage() {
                 Contact Information
               </h2>
               <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-primary-100 p-3 rounded-lg mr-4">
-                    <Phone className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a
-                      href="tel:+263712345678"
-                      className="text-primary-600 hover:text-primary-700"
-                    >
-                      +263 71 234 5678
-                    </a>
-                  </div>
-                </div>
-
                 <div className="flex items-start">
                   <div className="bg-primary-100 p-3 rounded-lg mr-4">
                     <Mail className="w-6 h-6 text-primary-600" />
@@ -142,6 +151,12 @@ export default function ContactPage() {
                   </p>
                 </div>
               ) : (
+                <>
+                  {error && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                      <p className="text-red-800 text-sm">{error}</p>
+                    </div>
+                  )}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label
@@ -196,7 +211,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="+263 71 234 5678"
+                      placeholder="Enter your phone number"
                     />
                   </div>
 
@@ -251,12 +266,14 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center"
+                    disabled={isSubmitting}
+                    className="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
+                </>
               )}
             </div>
           </AnimatedSection>

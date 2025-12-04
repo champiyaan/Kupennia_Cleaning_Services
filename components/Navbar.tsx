@@ -2,19 +2,35 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useSearchParams, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  
+  // Check if user is searching (has search query param) or on the main services page (not individual area pages)
+  const hasSearchQuery = searchParams?.get("search") || searchParams?.get("q");
+  const isOnServicesPage = pathname === "/services"; // Only show on exact /services page, not /services/[area]
+  const showServicesLink = Boolean(hasSearchQuery) || Boolean(isOnServicesPage);
 
-  const navLinks = [
+  const baseNavLinks = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/cleaning-services", label: "Cleaning Services" },
+    { href: "/cleaning-services", label: "Services" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
+
+  // Conditionally add Services link (for service areas) when searching or on services pages
+  const navLinks = showServicesLink
+    ? [
+        ...baseNavLinks.slice(0, 1), // Home
+        { href: "/services", label: "Service Areas" },
+        ...baseNavLinks.slice(1), // Services (cleaning-services), About, Contact
+      ]
+    : baseNavLinks;
 
   return (
     <motion.nav

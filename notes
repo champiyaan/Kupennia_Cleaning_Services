@@ -1,0 +1,26 @@
+
+
+
+resend api jey re_Hi8xu9bB_2uYybAjcAJbFMvDQ36yNrgRW
+
+
+
+
+ADMIN_PASSWORD=tee1997
+
+# Brevo SMTP Configuration
+EMAIL_HOST=smtp-relay.brevo.com
+EMAIL_PORT=587
+EMAIL_USE_TLS=true
+EMAIL_HOST_USER=869158002@smtp-brevo.com
+EMAIL_HOST_PASSWORD=RmO95s7hFSbHIZV6
+DEFAULT_FROM_EMAIL=geekt869@gmail.com
+
+
+
+
+
+How to access
+After deployment, your sitemap will be available at:
+https://kupennia.co.zw/sitemap.xml
+https://kupennia.co.zw/robots.txt (references the sitemap)
