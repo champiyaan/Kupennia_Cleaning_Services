@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -37,19 +38,23 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white shadow-md sticky top-0 z-50"
+      className="bg-white shadow-md sticky top-0 z-[100] backdrop-blur-sm"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20 md:h-28">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link href="/" className="text-2xl font-bold text-primary-600">
-              Kupennia Cleaning
+          <div>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo_kupennia.webp"
+                alt="Kupennia Cleaning Services"
+                width={350}
+                height={120}
+                className="h-16 md:h-28 w-auto"
+                priority
+              />
             </Link>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
