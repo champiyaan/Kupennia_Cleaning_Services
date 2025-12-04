@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
-
+// Google Analytics Tag ID
 const siteUrl = "https://kupennia.com";
 
 export const metadata: Metadata = {
