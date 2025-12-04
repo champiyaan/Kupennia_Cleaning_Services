@@ -51,7 +51,7 @@ jobs:
             npm ci
             pm2 describe kupennia-cleaning > /dev/null 2>&1
             if [ $? -eq 0 ]; then
-              pm2 reload kupennia-cleaning || (pm2 delete kupennia-cleaning 2>/dev/null && pm2 start npm --name "kupennia-cleaning" -- run start)
+              pm2 reload kupennia-cleaning || pm2 restart kupennia-cleaning
             else
               pm2 start npm --name "kupennia-cleaning" -- run start
             fi
