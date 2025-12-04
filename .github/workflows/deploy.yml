@@ -26,18 +26,6 @@ jobs:
         env:
           NODE_ENV: production
       
-      - name: Backup .env.local on server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: 22
-          script: |
-            if [ -f /root/kupennia-cleaning/.env.local ]; then
-              cp /root/kupennia-cleaning/.env.local /root/.env.local.backup
-            fi
-      
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -47,7 +35,7 @@ jobs:
           port: 22
           source: "."
           target: "/root/kupennia-cleaning"
-          rm: true
+          rm: false
           overwrite: true
       
       - name: SSH - Install & Restart
@@ -59,10 +47,7 @@ jobs:
           port: 22
           script: |
             cd /root/kupennia-cleaning
-            if [ -f /root/.env.local.backup ]; then
-              cp /root/.env.local.backup .env.local
-            fi
-            rm -rf node_modules .next/cache .git data
+            rm -rf node_modules .next/cache .git
             npm ci
             pm2 describe kupennia-cleaning > /dev/null 2>&1
             if [ $? -eq 0 ]; then
