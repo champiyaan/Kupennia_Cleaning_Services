@@ -75,7 +75,7 @@ export default function Home() {
     { slug: "newlands", name: "Newlands" },
     { slug: "tynwald", name: "Tynwald" },
   ];
-
+// array of areas in harare
   // FAQ Schema for SEO
   const faqSchema = {
     "@context": "https://schema.org",
@@ -321,7 +321,7 @@ export default function Home() {
               Serving All Areas of Harare
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              We provide professional cleaning services throughout Harare, Zimbabwe. From upscale suburbs to residential neighborhoods, we're here to serve you.
+              We provide professional cleaning services throughout Harare, Zimbabwe. From upscale suburbs to residential neighborhoods, we&apos;re here to serve you.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-8">
