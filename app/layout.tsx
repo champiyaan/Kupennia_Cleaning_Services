@@ -35,6 +35,22 @@ export const metadata: Metadata = {
     "cleaning company Harare",
     "house cleaning services",
     "professional housekeeping",
+    "Glen Lorne cleaning",
+    "Borrowdale cleaning",
+    "Mount Pleasant cleaning",
+    "Highlands cleaning",
+    "Chisipite cleaning",
+    "Avondale cleaning",
+    "Newlands cleaning",
+    "Tynwald cleaning",
+    "Pomona cleaning",
+    "Helensvale cleaning",
+    "Carrick Creagh cleaning",
+    "Harare cleaners",
+    "best cleaning service Harare",
+    "top cleaners Harare",
+    "affordable cleaning Harare",
+    "reliable cleaners Harare",
   ],
   authors: [{ name: "Kupennia Cleaning Services" }],
   creator: "Kupennia Cleaning Services",
@@ -100,15 +116,18 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Kupennia Cleaning Services",
-  image: `${siteUrl}/logo.jpg`,
+  image: `${siteUrl}/logo_kupennia.webp`,
   "@id": siteUrl,
   url: siteUrl,
   priceRange: "$$",
+  telephone: "+263-XXX-XXXX",
+  email: "info@kupennia.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Harare",
     addressLocality: "Harare",
     addressRegion: "Harare",
+    postalCode: "0000",
     addressCountry: "ZW",
   },
   geo: {
@@ -116,17 +135,153 @@ const jsonLd = {
     latitude: -17.8292,
     longitude: 31.0522,
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-    ],
-    opens: "08:00",
-    closes: "18:00",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Harare",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Glen Lorne",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Borrowdale",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Mount Pleasant",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Highlands",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Chisipite",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Avondale",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Newlands",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Tynwald",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Pomona",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Helensvale",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    },
+    {
+      "@type": "City",
+      name: "Carrick Creagh",
+      addressRegion: "Harare",
+      addressCountry: "ZW"
+    }
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "09:00",
+      closes: "14:00",
+    }
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Cleaning Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Deep Cleaning",
+          description: "Comprehensive deep cleaning for homes and offices"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Office Cleaning",
+          description: "Professional office and commercial cleaning"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Carpet Cleaning",
+          description: "Professional carpet and upholstery cleaning"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Window Cleaning",
+          description: "Crystal clear window cleaning services"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "BNB Cleaning",
+          description: "Professional Airbnb and short-term rental cleaning"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Car Washing",
+          description: "Professional car washing and detailing services"
+        }
+      }
+    ]
   },
   sameAs: [
     // Add your social media links here
@@ -135,7 +290,10 @@ const jsonLd = {
     "@type": "AggregateRating",
     ratingValue: "5",
     reviewCount: "50",
+    bestRating: "5",
+    worstRating: "1"
   },
+  description: "Professional cleaning services in Harare, Zimbabwe. Residential and commercial cleaning, deep cleaning, office cleaning, carpet cleaning, window cleaning, BNB cleaning, mold removal, car washing, and more. Eco-friendly solutions. Fully insured. Serving all areas of Harare including Glen Lorne, Borrowdale, Mount Pleasant, Highlands, Chisipite, Avondale, Newlands, Tynwald, Pomona, Helensvale, Carrick Creagh, and more.",
 };
 
 export default function RootLayout({

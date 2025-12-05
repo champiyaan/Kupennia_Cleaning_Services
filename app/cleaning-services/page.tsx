@@ -18,8 +18,8 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
-  title: "Our Cleaning Services - Deep Cleaning, Office Cleaning, Carpet Cleaning & More",
-  description: "Comprehensive cleaning services in Harare: Deep cleaning, office cleaning, carpet cleaning, window cleaning, BNB cleaning, mold removal, car washing, bin cleaning, mattress cleaning, residential and commercial cleaning. Professional, eco-friendly, fully insured.",
+  title: "Our Cleaning Services - Deep Cleaning, Office Cleaning, Carpet Cleaning & More | Harare",
+  description: "Comprehensive cleaning services throughout Harare, Zimbabwe: Deep cleaning, office cleaning, carpet cleaning, window cleaning, BNB cleaning, mold removal, car washing, bin cleaning, mattress cleaning, residential and commercial cleaning. Serving Glen Lorne, Borrowdale, Mount Pleasant, Highlands, Chisipite, Avondale, Newlands, Tynwald, Pomona, Helensvale, Carrick Creagh and all areas. Professional, eco-friendly, fully insured.",
   keywords: [
     "deep cleaning Harare",
     "office cleaning services",
@@ -32,11 +32,25 @@ export const metadata: Metadata = {
     "mattress cleaning",
     "residential cleaning Harare",
     "commercial cleaning Zimbabwe",
+    "Glen Lorne cleaning services",
+    "Borrowdale cleaning services",
+    "Mount Pleasant cleaning",
+    "Highlands cleaning services",
+    "Chisipite cleaning",
+    "Avondale cleaning",
+    "Newlands cleaning",
+    "Tynwald cleaning",
+    "Pomona cleaning",
+    "Helensvale cleaning",
+    "Carrick Creagh cleaning",
+    "Harare cleaning company",
+    "best cleaners Harare",
   ],
   openGraph: {
     title: "Our Cleaning Services - Professional Cleaning in Harare",
-    description: "Comprehensive cleaning services in Harare: Deep cleaning, office cleaning, carpet cleaning, and more.",
+    description: "Comprehensive cleaning services throughout Harare: Deep cleaning, office cleaning, carpet cleaning, and more. Serving all areas of Harare.",
     type: "website",
+    url: "https://kupennia.com/cleaning-services",
   },
 };
 
